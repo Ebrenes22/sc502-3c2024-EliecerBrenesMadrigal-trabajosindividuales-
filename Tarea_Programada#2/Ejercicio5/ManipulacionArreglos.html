@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Estudiantes</title>
+</head>
+<body>
+    <h1>Lista de Estudiantes</h1>
+    <div id="listaEstudiantes"></div>
+    <div id="promedioContainer"></div>
+
+    <script>
+        const estudiantes = [
+            { nombre: "Eliecer", apellido: "Brenes", nota: 90 },
+            { nombre: "Benito", apellido: "Floro", nota: 92 },
+            { nombre: "María", apellido: "Rodríguez", nota: 78 },
+            { nombre: "Carlos", apellido: "Salcedo", nota: 95 },
+            { nombre: "Laura", apellido: "Madriz", nota: 88 }
+        ];
+
+        function mostrarEstudiantes() {
+            const contenedor = document.getElementById('listaEstudiantes');
+            contenedor.innerHTML = ''; 
+            estudiantes.forEach(estudiante => {
+                const elementoEstudiante = document.createElement('div');
+                elementoEstudiante.innerHTML = `${estudiante.nombre} ${estudiante.apellido} - Nota: ${estudiante.nota}`;
+                contenedor.appendChild(elementoEstudiante);
+            });
+
+            const promedio = calcularPromedio();
+            const promedioContainer = document.getElementById('promedioContainer');
+            promedioContainer.textContent = `Promedio de la clase: ${promedio}`;
+        }
+
+        function calcularPromedio() {
+            const suma = estudiantes.reduce((acumulador, estudiante) => {
+                return acumulador + estudiante.nota;
+            }, 0);
+            return (suma / estudiantes.length).toFixed(2);
+        }
+        window.onload = mostrarEstudiantes;
+    </script>
+</body>
+</html>

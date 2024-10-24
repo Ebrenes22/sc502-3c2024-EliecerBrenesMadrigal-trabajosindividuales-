@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulación del DOM</title>
+    <style>
+        #Parrafo {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <p id="miParrafo">Sabes quien es Sherk?.</p>
+    <button id="miBoton">Descubrelo</button>
+    <script>
+        function cambiarContenido() {
+            document.getElementById("miParrafo").innerHTML = "Shrek siempre había sido un ogro solitario, disfrutando de su vida tranquila en el pantano. Le encantaba estar lejos de la gente, quien lo veía como un monstruo. Su personalidad gruñona y su desdén por las molestias humanas eran su forma de protegerse..";
+        }
+        document.getElementById("miBoton").onclick = cambiarContenido;
+    </script>
+</body>
+</html
