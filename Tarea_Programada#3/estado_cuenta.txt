@@ -1,0 +1,31 @@
+Estado de Cuenta
+Detalle de Transacciones:
+----------------------------------------
+ID: 1
+Descripción: Gasolina
+Monto Contado: ¢10,000.00
+Monto con Interés (2.6%): ¢ 10,260.00
+Cashback (0.1%):  ¢10.00
+Monto Final a Pagar: ¢ 10,250.00
+----------------------------------------
+ID: 2
+Descripción: Supermercado
+Monto Contado: ¢5,000.00
+Monto con Interés (2.6%): ¢ 5,130.00
+Cashback (0.1%):  ¢5.00
+Monto Final a Pagar: ¢ 5,125.00
+----------------------------------------
+ID: 3
+Descripción: Gasolina
+Monto Contado: ¢10,000.00
+Monto con Interés (2.6%): ¢ 10,260.00
+Cashback (0.1%):  ¢10.00
+Monto Final a Pagar: ¢ 10,250.00
+----------------------------------------
+
+Detalle de Totales:
+Total Monto Contado: ¢ 25,000.00
+Total Monto con Interés: ¢ 25,650.00
+Total Cashback: ¢ 25.00
+Total Monto Final a Pagar: ¢ 25,625.00
+
