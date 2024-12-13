@@ -46,25 +46,6 @@ try {
                 echo json_encode(['message' => 'Comentario eliminado con éxito.']);
             }
             break;
-        case 'PUT':
-            // Actualizar un comentario existente(me falto en la tarea 4)
-            $data = json_decode(file_get_contents("php://input"), true);
-            if (isset($data['id'], $data['comment'])) {
-                $sql = "UPDATE comments SET comment = :comment WHERE id = :id";
-                $stmt = $conn->prepare($sql);
-                $stmt->bindParam(':comment', $data['comment']);
-                $stmt->bindParam(':id', $data['id']);
-
-                if ($stmt->execute()) {
-                    echo json_encode(['message' => 'Comentario actualizado con éxito.']);
-                } else {
-                    echo json_encode(['error' => 'Error al actualizar el comentario.']);
-                }
-            } else {
-                echo json_encode(['error' => 'Datos incompletos.']);
-            }
-            break;
-
 
         default:
             echo json_encode(['message' => 'Método no soportado.']);
@@ -73,3 +54,4 @@ try {
 } catch (PDOException $e) {
     echo json_encode(['error' => $e->getMessage()]);
 }
+?>
